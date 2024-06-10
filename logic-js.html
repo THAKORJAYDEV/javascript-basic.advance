@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            text-transform: capitalize;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 30px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <table border="0" width="40%" cellspacing="" cellpadding="" >
+        <tr align="left" >
+            <th colspan="4">marksheet from information technology</th>
+        </tr>
+
+        <tr align="center" >
+            <th colspan="4">enter marks</th>
+        </tr>
+
+        <tr align="left">
+            <td colspan="3">c language</td>
+            <td colspan="2"><input type="number" name="" id="num1"></td>
+        </tr>
+    
+        <tr align="left">
+            <td colspan="3">c++ language</td>
+            <td colspan=""><input type="number"  name="" id="num2"></td>
+        </tr>
+
+        <tr align="left">
+            <td colspan="3">database</td>
+            <td colspan=""><input type="number"  name="" id="num3"></td>
+        </tr>
+
+        <tr align="left">
+            <td colspan="3">html</td>
+            <td colspan=""><input type="number"  name="" id="num4"></td>
+        </tr>
+
+        <tr align="left">
+            <td colspan="3">css</td>
+            <td colspan=""><input type="number"  name="" id="num4"></td>
+        </tr>
+
+        <tr align="left">
+
+            <td colspan="3">php</td>
+            <td colspan=""><input type="number"  name="" id="num4"></td>
+        </tr>
+
+        
+        <tr align="left">
+            <td colspan="3">core java</td>
+            <td colspan=""><input type="number"  name="" id="num5"></td>
+        </tr>
+
+        <tr align="left">
+            <td colspan="3"></td>
+            <td><input type="button"onclick="calculate()" value="Result"></td>
+        </tr>
+
+        <tr align="right">
+            <td colspan="3" >total is : <a href="" id="total"></a>/350</td>
+            <td >percentage is : <a href="" id="percentage">%</a></td>
+        </tr>
+    </table>
+</center>
+
+
+
+<script>
+    function calculate() {
+        var num1 = parseFloat(document.getElementById('num1').value);
+        var num2 = parseFloat(document.getElementById('num2').value);
+        var num3 = parseFloat(document.getElementById('num3').value);
+        var num4 = parseFloat(document.getElementById('num4').value);
+        var num5 = parseFloat(document.getElementById('num5').value);
+
+        var total = num1 + num2 + num3 + num4 + num5 ;
+        var percentage = (num5 / total) * 350;
+
+        document.getElementById('total').textContent = total.toFixed(2);
+        document.getElementById('percentage').textContent = percentage.toFixed(2);
+    }
+</script>
+
+
+</body>
+</html>

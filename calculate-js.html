@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate javascript | html</title>
+</head>
+<style>
+    table {
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: capitalize;
+    }
+    input {
+        border-radius: 5px;
+        border: 1px solid black;
+        padding: 5px 13px;
+        font-size: large;
+    }
+    a {
+        padding-left: 5px;
+        text-decoration: none;
+    }
+    h2 {
+        font-size: 25px;
+        color: rgb(99, 90, 90);
+    }
+</style>
+<body>
+    <center>
+    <table border="0">
+        <tr align="center">
+            <th colspan="3" ><h2>Maths Operation </h2></th>
+        </tr>
+
+        <tr>
+            <td colspan="2">Enter 1st number:</td>
+            <td colspan="2"><input type="number" name="" id="num1"></td>
+        </tr>
+
+        
+        <tr>
+            <td colspan="2">Enter 2ed number:<t/d>
+            <td colspan="2"><input type="number" name="" id="num2"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><input type="button" onclick="calculate('+')"   value="+">
+            <input type="button"  onclick="calculate('-')" value="-">
+            <input type="button" onclick="calculate('*')" value="*"></td>
+            <td colspan="2" id="percentage">answer is : <a href="" id="result"></a></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><input type="button" onclick="calculate('/')" value="/">
+            <input type="button" onclick="calculate('%')" value="%"></td>
+        </tr>
+    </table>
+</center>
+
+
+<script>
+    function calculate(operator) {
+        var num1 = parseFloat(document.getElementById('num1').value);
+        var num2 = parseFloat(document.getElementById('num2').value);
+        var result;
+
+        switch(operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+            case '%':
+                result = (num2 / num1) * 100;
+                break;
+            default:
+                result = 'Invalid operator';
+        }
+
+        document.getElementById('result').textContent = result.toFixed(2);
+    }
+</script>
+
+</body>
+</html>
